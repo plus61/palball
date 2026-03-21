@@ -1,0 +1,1845 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="フィットネス"
+  description="茅ヶ崎のフィットネスクラブ。ノーチラスマシン全面入れ替え。時短トレーニングでクオリティライフを。"
+  bodyClass="p-fitness"
+>
+<main id="cm-main">
+    <section class="ttl-page">
+        <div class="container">
+            <h1>フィットネス</h1>
+        </div>
+    </section>
+    <div class="breadcrumb">
+        <div class="container">
+            <ul id="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>HOME</span>
+                    </a>
+                </li>
+                <li>
+                    <span>フィットネス</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="main-cont">
+        <div class="sec-cont">
+            <div class="container">
+                <p class="img-top">
+                    <img src="/images/fitness/img_3.webp" alt="img-top" width="1380" height="490">
+                </p>
+                <div class="page-index">
+                    <p class="page-index__ttl">page index</p>
+                    <ul class="page-index__anchor-link anchor-link">
+                        <li class="anchor-link__item">
+                            <a href="#point" class="anchor-link__link cm-arr cm-arr--down">
+                                <span>5つのポイント</span>
+                            </a>
+                        </li>
+                        <li class="anchor-link__item">
+                            <a href="#facility_introduction" class="anchor-link__link cm-arr cm-arr--down">
+                                <span>設備紹介</span>
+                            </a>
+                        </li>
+                        <li class="anchor-link__item">
+                            <a href="#program" class="anchor-link__link cm-arr cm-arr--down">
+                                <span>プログラム</span>
+                            </a>
+                        </li>
+                        <li class="anchor-link__item">
+                            <a href="#price" class="anchor-link__link cm-arr cm-arr--down">
+                                <span>料金案内</span>
+                            </a>
+                        </li>
+                        <li class="anchor-link__item">
+                            <a href="#flow" class="anchor-link__link cm-arr cm-arr--down">
+                                <span>入会の流れ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+               <div class="box-gray box-campaign" id="campaign">
+                    <div class="box-campaign__inner">
+                        <!-- <div class="campaign_fitness">
+                            <div class="campaign_fitness__head">
+                                <h3 class="campaign_fitness__ttl">大好評につき35周年<br>キャンペーン延長<br><span class="text_red">最終締切</span></h3>
+                                <img src="https://pal-ball.com/wp-content/themes/pal-ball//images/fitness/fitness/campaign-number.webp" alt="10.31 FRI マデ" width="360" height="108">
+                            </div>
+                            <div class="campaign_fitness__price">
+                                <div class="campaign_fitness__left">
+                                    <h4 class="left-ttl">特典1</h4>
+                                    <div class="left-cont fix-height">
+                                        <p>月<br class="show-pc">会<br class="show-pc">費</p>
+                                    </div>
+                                </div>
+                                <div class="campaign_fitness__right">
+                                    <h4 class="right-ttl">2ヶ月間お試し！</h4>
+                                    <div class="right-cont fix-height">
+                                        <div class="price-detail">
+                                            <h5 class="price-detail__ttl">レギュラー会員</h5>
+                                            <div class="price-detail__cont">
+                                                <div class="price-detail__price1">
+                                                    <h6 class="price-detail__sub">通常月会費</h6>
+                                                    <p class="price-infor">
+                                                        <span class="number">6,980</span>
+                                                        <span class="unit">円／月<label>（税別）</label></span>
+                                                    </p>
+                                                    <p class="price-total">7,678円／月<span>（税込）</span></p>
+                                                </div>
+                                                <div class="price-detail__price2">
+                                                    <h6 class="price-detail__sub co-green"><small class="insub">4か月間の月会費</small></h6>
+                                                    <p class="price-infor">
+                                                        <span class="number co-green">980</span>
+                                                        <span class="unit">円／月<label>（税別）</label></span>
+                                                    </p>
+                                                    <p class="price-total">1,078円／月<span>（税込）</span></p>
+                                                </div>
+                                                <div class="price-detail__price3">限定<br><span>150<small>名</small></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="price-detail">
+                                            <h5 class="price-detail__ttl bg-pink">アンダー40・パパママ会員</h5>
+                                            <div class="price-detail__cont">
+                                                <div class="price-detail__price1">
+                                                    <h6 class="price-detail__sub">通常月会費</h6>
+                                                    <p class="price-infor">
+                                                        <span class="number">3,980</span>
+                                                        <span class="unit">円／月<label>（税別）</label></span>
+                                                    </p>
+                                                    <p class="price-total">4,378円／月<span>（税込）</span></p>
+                                                </div>
+                                                <div class="price-detail__price2 arr-pink">
+                                                    <h6 class="price-detail__sub co-pink"><small class="insub">4か月間の月会費</small></h6>
+                                                    <p class="price-infor">
+                                                        <span class="number co-pink">980</span>
+                                                        <span class="unit">円／月<label>（税別）</label></span>
+                                                    </p>
+                                                    <p class="price-total">1,078円／月<span>（税込）</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="price-detail">
+                                            <h5 class="price-detail__ttl">中高生会員</h5>
+                                            <div class="price-detail__cont">
+                                                <div class="price-detail__price1">
+                                                    <h6 class="price-detail__sub">通常月会費</h6>
+                                                    <p class="price-infor">
+                                                        <span class="number">2,980</span>
+                                                        <span class="unit">円／月<label>（税別）</label></span>
+                                                    </p>
+                                                    <p class="price-total">3,278円／月<span>（税込）</span></p>
+                                                </div>
+                                                <div class="price-detail__price2">
+                                                    <h6 class="price-detail__sub co-green"><small class="insub">4か月間の月会費</small></h6>
+                                                    <p class="price-infor">
+                                                        <span class="number co-green">980</span>
+                                                        <span class="unit">円／月<label>（税別）</label></span>
+                                                    </p>
+                                                    <p class="price-total">1,078円／月<span>（税込）</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="campaign_fitness__price mt50">
+                                <div class="campaign_fitness__left">
+                                    <h4 class="left-ttl">特典2</h4>
+                                    <div class="left-cont fix-height">
+                                        <p>入<br class="show-pc">会<br class="show-pc">金</p>
+                                    </div>
+                                </div>
+                                <div class="campaign_fitness__right">
+                                    <h4 class="right-ttl">10ヶ月継続割引き</h4>
+                                    <div class="right-cont fix-height">
+                                        <div class="price-detail">
+                                            <h5 class="price-detail__ttl">入会金</h5>
+                                            <div class="price-detail__cont three-col">
+                                                <div class="price-detail__price1">
+                                                    <h6 class="price-detail__sub">通常入会金</h6>
+                                                    <p class="price-infor">
+                                                        <span class="number">5,000</span>
+                                                        <span class="unit">円／月<label>（税別）</label></span>
+                                                    </p>
+                                                    <p class="price-total">5,500円／月<span>（税込）</span></p>
+                                                </div>
+                                                <div class="price-detail__price2">
+                                                    <h6 class="price-detail__sub co-green">0</h6>
+																										                                                <p class="price-infor">
+                                                        <span class="number co-green">無料</span>
+                                                        <span class="unit">円／月<label>（税別）</label></span>
+                                                    </p>
+																									                                                    <p class="price-total">2,750円／月<span>（税込）</span></p>
+                                                </div>
+                                                <div class="price-detail__price3-wrap">
+                                                                                                                                                        <div class="price-detail__price3">
+                                                                                                                                                            <span class="small">10ヶ月継続で</span><span class="small mg_adjust">さらに<span class="co-green">100<span class="small">%OFF</span></span></span><span><span class="big co-green">0</span><span class="small">円</span></span>
+                                                                                                                                                        </div>
+                                                                                                                                                        <div class="price-detail__price3">
+                                                                                                                                                            <span class="text-center">10ヶ月<br>継続割でない<br>場合は満額</span>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <img src="/images/fitness/img_4.png" alt="campaign_fitness">
+                    </div>
+                </div> 
+                <ul class="list-indent2 mt30">
+										<li>※キャンペーンの適用には、満6ヶ月間の在籍が条件となります。</li>
+										<li>※別途年会費 3,000円 (税込3,300円) が必要となります。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sec-cont-larger banner-WEB">
+            <div class="container">
+                <div class="banner-WEB__inner">
+                    <h3 class="banner-WEB__ttl">フィットネス新規ご入会は<br class="show-sp">こちらから</h3>
+                    <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" target="_blank" class="cm-btn cm-btn--btn-white btn-shadow-blur cm-arr cm-arr--right btn-hover btn-hover--yellow mt00">新規WEB入会</a>
+                </div>
+            </div>
+        </div>
+        <div class="sec-cont stripe-top-left" id="point">
+            <div class="container">
+                <h2 class="cm-ttl01 mb00">
+                    <span class="txt-eng txt-eng--gray">point</span>
+                    <span class="txt-jp">選ばれる<strong class="co-yellow">5</strong>つの理由</span>
+                </h2>
+            </div>
+        </div>
+        <div class="sec-reason">
+            <div class="container">
+                <div class="box-reason">
+                    <div class="box-reason__img">
+                        <img src="/images/fitness/img_5.webp" alt="reason1" width="651" height="380">
+                    </div>
+                    <div class="box-reason__txt">
+                        <h3 class="box-reason__ttl">
+                            <span class="ttl-eng">reason1</span>
+                            <span class="ttl-jp">衝撃的バリュープライス</span>
+                        </h3>
+                        <div class="box-reason__body">
+                            <p>日本屈指の衝撃的バリュープライス。6,980円(税込7,678円)で営業時間内はいつでもジム・スタジオ・プール・スパ・サウナの全エリア利用可能。さらに40歳未満なら3,980円(税込4,378円)！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-reason box-reason--reverse">
+                    <div class="box-reason__img">
+                        <img src="/images/fitness/img_6.webp" alt="reason2" width="651" height="380">
+                    </div>
+                    <div class="box-reason__txt">
+                        <h3 class="box-reason__ttl">
+                            <span class="ttl-eng">reason2</span>
+                            <span class="ttl-jp">初⼼者にやさしい</span>
+                        </h3>
+                        <div class="box-reason__body">
+                            <p>「ジムがはじめて」「どうやって運動したらいいか分からない」という方もご安心ください。ジムにはトレーナーが常駐しており、マシンの操作方法やトレーニング方法など丁寧にサポートいたします。地域No.1の「初心者へのやさしさ」を目指しています。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-reason">
+                    <div class="box-reason__img">
+                        <img src="/images/fitness/img_7.webp" alt="reason3" width="651" height="380">
+                    </div>
+                    <div class="box-reason__txt">
+                        <h3 class="box-reason__ttl">
+                            <span class="ttl-eng">reason3</span>
+                            <span class="ttl-jp">時短フィットネス</span>
+                        </h3>
+                        <div class="box-reason__body">
+                            <p>トレーニングマシンをフルリニューアル！安全性と効率性を兼ね備えた最新マシンで、少ないセットで効率的かつ効果的にトレーニングできます。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-reason box-reason--reverse">
+                    <div class="box-reason__img">
+                        <img src="/images/fitness/img_8.webp" alt="reason4" width="651" height="380">
+                    </div>
+                    <div class="box-reason__txt">
+                        <h3 class="box-reason__ttl">
+                            <span class="ttl-eng">reason4</span>
+                            <span class="ttl-jp">最新鋭のレッスンプログラム導入</span>
+                        </h3>
+                        <div class="box-reason__body">
+                            <p>初心者でも楽しめるレッスンを多数ご用意！海外で人気のあるレッスンや、トレンドを取り入れた最新レッスンも導入。アップデートがあって飽きない・楽しいプログラムを豊富に揃えています！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-reason">
+                    <div class="box-reason__img">
+                        <img src="/images/fitness/img_9.webp" alt="reason5" width="651" height="380">
+                    </div>
+                    <div class="box-reason__txt">
+                        <h3 class="box-reason__ttl">
+                            <span class="ttl-eng">reason5</span>
+                            <span class="ttl-jp">地域密着</span>
+                        </h3>
+                        <div class="box-reason__body">
+                            <p>湘南の茅ヶ崎で50年以上の歴史があるハヤシグループ（株式会社林水泳教室）が運営。おかげさまで、30年以上にわたり地域の方々にご愛顧いただいております。これからも地域の皆さまの健康づくりや仲間づくりの場となるサードプレイスをご提供していきます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-cont stripe-top-right stripe-top-right--short2" id="facility_introduction">
+            <div class="container">
+                <h2 class="cm-ttl01">
+                    <span class="txt-eng txt-eng--gray text-left">facility<br>introduction</span>
+                    <span class="txt-jp">設備紹介</span>
+                </h2>
+                <h3 class="two-column__ttl text-left mb40">トレーニングジム</h3>
+                <h4 class="txt-m co-green mb20">ノーチラスインパクトシリーズ</h4>
+                <p>ノーチラスインパクトシリーズは、ヘビーウェイトスタックを標準装備しており、初心者からプロのアスリートまで幅広い層に支持されております。<br>スイッチのように重量を変更できる特許取得済みのLock N Loadウェイト選択システムを標準装備しております。</p>
+                <p>また、ノーチラス社創業者のアーサー・ジョーンズ博士が開発した「<span class="co-green font-bold">ノーチラスカム</span>」を装備したトレーニングマシンは、トレーニングの最大効果を最大限に高めるための「<span class="co-green font-bold">回転抵抗</span>」と「<span class="co-green font-bold">可変抵抗</span>」を採用。筋肉にどの角度からでも安全に最大の負荷をかけられるため、<span class="co-green font-bold">少ないセット数で効率的な時短フィットネスが可能です！</span><br>日本最大級サプライヤー【think】監修<a href="https://www.youtube.com/@pal-ball" target="_blank">オリジナル使用動画</a>が付いているので 安心して最大の効果を得られます。</p>
+                <div class="list-product">
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/インパクト/<br>シーテッドレッグプレス</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_10.webp" alt="product-img01" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>脚・ヒップ</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 259.578px;">
+                            <p style="height: 172.781px;">大きなフットプレートにより、脚の位置を変えることで、様々な脚のトレーニングを実施することができます。上半身を後方へ移動させることで、より安定したトレーニングが可能です。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/lSpH0G4cnVc?si=Dd15KsVIQB7GE4SQ">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/インパクト/<br>レッグエクステンション</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_11.webp" alt="product-img02" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>脚・ヒップ</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 259.578px;">
+                            <p style="height: 172.781px;">アクセスしやすい中央のレッグパットが脚の左右差を補正するため、ダイレクトに負荷を体感できます。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/KtEhX_4XbD0?si=bnDx24cpQKwhLxEI">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/インパクト/<br>シーテッドレッグカール</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_12.webp" alt="product-img03" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>脚・ヒップ</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 259.578px;">
+                            <p style="height: 172.781px;">膝の位置が腰の位置よりも高くなるよう設計されているため、ハムストリングスを十分にストレッチできます。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/fv4Ln1K9EiM?si=0bwAt-rhJnJ7Bh6L">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/インパクト/<br>デルトイドフライ</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_13.webp" alt="product-img04" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>胸</li>
+                                <li>肩・腕</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 259.578px;">
+                            <p style="height: 172.781px;">1台のマシンで、胸のトレーニングと肩のトレーニングが実施可能です。可動範囲を調節できるのでお好みのポジションでトレーニングしていただけます。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/r5aKRQlwi64?si=SI0ug33E9XjSTth1">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/エボ /チェストプレス</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_14.webp" alt="product-img05" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>胸</li>
+                                <li>肩・腕</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 317.172px;">
+                            <p style="height: 230.375px;">インスピレーションは、ラップアラウンドガスアシストシート調節により、スムーズなシートポジション変更が可能です。左右独立稼働により細やかな調整を実現する、ノーチラスの流れを汲んだ最上位マシンになります。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/2y_tPF1WLas?si=a3Dy0mzhONvrokr8">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/インパクト/<br>ラットプルダウン</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_15.webp" alt="product-img06" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>背中</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 317.172px;">
+                            <p style="height: 230.375px;">シンプルながらも十分な可動範囲を備え、下半身をしっかり固定できる調節可能な膝パッドを搭載しています。 また、アタッチメントを交換することで、多彩な背中のトレーニングを実施できます。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/SVxNtHxoTBc?si=Jszd_u4uAOnwA1CS">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/インパクト/<br>バーチカルロウ</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_16.webp" alt="product-img07" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>背中</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 317.172px;">
+                            <p style="height: 230.375px;">可動部分が後方にあることで広背筋を十分にストレッチでき、可動範囲を最大に得ることができます。 角度のついたフットサポートパッドが下半身を固定し、安定したトレーニングをサポートします。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/GsVB5P64S9k?si=kpPlMpGqAq4qyXk6">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/インスピレーション/<br>ロータリートルソー</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_17.webp" alt="product-img08" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>お腹</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 317.172px;">
+                            <p style="height: 230.375px;">内腿でパッドを挟み込み、下半身を固定して動作を行います。可動域は-60°から+60°まで10°刻みで調節可能です。左右別々にトレーニングを実施することもできます。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/oBT1QI8DRzI?si=rXZvtseYYxzwvvcC">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">HAL/<br>ブーティービルダープラチナム4.0</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_18.webp" alt="product-img16" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>脚・ヒップ</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 317.172px;">
+                            <p style="height: 230.375px;">大臀筋を中心に鍛えられる、ヒップアップマシンの代名詞。特許取得の大きなフットプレートが様々な方のトレーニングをサポートします。シート位置、背もたれの位置なども調節可能です。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/rfAXMlr55V4?si=Nj2dWXw46obo8ECF">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">HAL/ブーティービルダー<br>スタンディングアブダクター</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_19.webp" alt="product-img17" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>脚・ヒップ</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 317.172px;">
+                            <p style="height: 230.375px;">スタンディングの状態で脚を外転させることで、大臀筋を鍛えることができます。女性に人気のトレーニングマシンです。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/-9h3JeEYD7M?si=YdSuCgUQOQ0yFgON">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">POWERTEC/<br>レバレッジスクワット&amp;カーフ</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_20.webp" alt="product-img18" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>脚・ヒップ</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 317.172px;">
+                            <p style="height: 230.375px;">肩の位置のパットを使用することで上半身を固定し、安定した状態で下半身のトレーニングを行うことができます。また、フットプレートに角度をつけることで重心が後方に移動し、大腿四頭筋に集中的に負荷を加えることができます。</p>
+                            <button class="c-video-btn btn-hover js-open-video" data-video="https://www.youtube.com/embed/3ZR7_MG1rXw?si=C6uYNZdECUqOxu5B">
+                                使用方法動画はこちら
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/NP/<br>デュアルアジャスタブルプーリー</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_21.webp" alt="product-img09" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>全身</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 317.172px;">
+                            <p style="height: 230.375px;">左右に2つのウェイトスタックを搭載。多彩なハイローポジションにより、1台で様々な種目のトレーニングが可能です。</p>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/NP/スミスマシン</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_22.webp" alt="product-img10" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>全身</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 283.172px;">
+                            <p style="height: 259.172px;">生体力学に基づいて設計された7段階の傾斜が、スクワットとプレス動作の効果を最大限に引き出します。</p>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/エボ /<br>アングルドレッグプレス</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_23.webp" alt="product-img11" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>脚・ヒップ</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 283.172px;">
+                            <p style="height: 259.172px;">マシンの角度は45°に設定。シートポジションの変更や、手の届く位置で簡単に操作できるセーフティハンドルも搭載しています。</p>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/レバレッジ/<br>チェストプレス</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_24.webp" alt="product-img12" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>胸</li>
+                                <li>肩・腕</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 283.172px;">
+                            <p style="height: 259.172px;">生体力学に基づいたレバーと回転軸により、人間本来の動きに沿った可動域を作り出します。流線型のデザインと本体側面に取り付けられたウェイトストレージにより、プレートの装着が安全かつ容易に行えます。また、左右独立した動作が可能です。</p>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/レバレッジ/<br>ラットプルダウン</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_25.webp" alt="product-img13" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>背中</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 283.172px;">
+                            <p style="height: 259.172px;">生体力学に基づいたレバーと回転軸により、人間本来の動きに沿った可動域を作り出します。流線型のデザインと本体側面に取り付けられたウェイトストレージにより、プレートの装着が安全かつ容易に行えます。また、左右独立した動作が可能です。</p>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/レバレッジ/<br>ローイング</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_26.webp" alt="product-img14" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>背中</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 283.172px;">
+                            <p style="height: 259.172px;">生体力学に基づいたレバーと回転軸により、人間本来の動きに沿った可動域を作り出します。流線型のデザインと本体側面に取り付けられたウェイトストレージにより、プレートの装着が安全かつ容易に行えます。また、左右独立した動作が可能です。</p>
+                        </div>
+                    </div>
+                    <div class="list-product__product">
+                        <h3 class="list-product__ttl" style="height: 70.3906px;">ノーチラス/レバレッジ/<br>ショルダープレス</h3>
+                        <div class="list-product__img">
+                            <figure>
+                                <img src="/images/fitness/img_27.webp" alt="product-img15" width="261" height="195">
+                            </figure>
+                            <ul class="img-tag">
+                                <li>肩・腕</li>
+                            </ul>
+                        </div>
+                        <div class="list-product__txt" style="height: 283.172px;">
+                            <p style="height: 259.172px;">生体力学に基づいたレバーと回転軸により、人間本来の動きに沿った可動域を作り出します。流線型のデザインと本体側面に取り付けられたウェイトストレージにより、プレートの装着が安全かつ容易に行えます。また、左右独立した動作が可能です。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===== Modal dùng chung ===== -->
+                <div class="c-video-modal" id="videoModal" aria-hidden="true">
+                    <div class="c-video-modal__overlay js-close-video"></div>
+                    <div class="c-video-modal__content" role="dialog" aria-modal="true">
+                        <button class="c-video-modal__close js-close-video">×</button>
+                        <div class="c-video-modal__iframe">
+                        <iframe id="videoIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                        </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-cont pb00">
+                    <h3 class="two-column__ttl text-left mb40">フリーウェイトコーナー</h3>
+                    <div class="list-img mb30">
+                        <p class="img">
+                            <img src="/images/fitness/img_28.webp" alt="フリーウェイトコーナー" width="1104" height="320">
+                        </p>
+                        <p class="img">
+                            <img src="/images/fitness/img_29.webp" alt="フリーウェイトコーナー" width="1104" height="320">
+                        </p>
+                    </div>
+                    <h4 class="txt-m co-green mb20">充実のマシン完備</h4>
+                    <p>ベンチプレス<span class="co-green font-bold">2台</span>、ハーフラック<span class="co-green font-bold">2台</span>、ケーブルクロス<span class="co-green font-bold">2台</span>、スミスマシン1台を完備した充実のフリーウェイトコーナーで初心者の方から上級者の方までトレーニングをお楽しみいただけます。</p>
+                </div>
+                <div class="sec-cont">
+                    <h3 class="two-column__ttl text-left mb40">Aスタジオ</h3>
+                    <p class="mb30">
+                        <img src="/images/fitness/img_30.webp" alt="Aスタジオ" width="1104" height="320">
+                    </p>
+                    <p>ダンス、エアロ、格闘技系、トレーニング系、ヨガ・ピラティス系など多彩で豊富なプログラムに自由にご参加いただけます。</p>
+                </div>
+            </div>
+        </div>
+        <div class="sec-cont stripe-top-left stripe-top-left--short" id="program">
+            <div class="container">
+                <h2 class="cm-ttl01">
+                    <span class="txt-eng txt-eng--gray">program</span>
+                    <span class="txt-jp">プログラム</span>
+                </h2>
+                                <div class="text-center">
+                    <a href="/wp-content/uploads/2025/12/e79c1738560a821f17cff138513b0ae8.pdf" target="_blank" class="cm-btn btn-icon btn-shadow-blur cm-arr cm-arr--right btn-hover">
+                        <p class="inner-btn">
+                            <span class="icon"><img src="/images/fitness/img_31.webp" alt="icon-pdf" width="29" height="36"></span>
+                            <span>プログラム タイムスケジュール</span>
+                        </p>
+                    </a>
+                </div>
+                                <div class="sec-cont pb00">
+                    <h3 class="two-column__ttl text-left mb40">スタジオプログラム</h3>
+                    <p class="mb30">
+                        <img src="/images/fitness/img_32.webp" alt="スタジオプログラム" width="1104" height="320">
+                    </p>
+                    <p class="text-center">スタジオでは、健康体操など負荷が少なく気軽にご参加いただけるプログラムから、<br>ヨガやピラティス、エアロビクスといった定番のエクササイズまで、楽しく効果的なプログラムをご用意しています。</p>
+                    <div class="list-three-img pd-top pd-top--m">
+                        <div class="list-three-img__item">
+                            <p class="list-three-img__img">
+                                <img src="/images/fitness/img_33.webp" alt="program-img02" width="354" height="230">
+                            </p>
+                            <h4 class="list-three-img__ttl">エアロビクス</h4>
+                            <p>持久力の向上、脂肪燃焼に効果的なプログラムです。</p>
+                        </div>
+                        <div class="list-three-img__item">
+                            <p class="list-three-img__img">
+                                <img src="/images/fitness/img_34.webp" alt="program-img03" width="354" height="230">
+                            </p>
+                            <h4 class="list-three-img__ttl">ダンス</h4>
+                            <p>音楽にあわせて、様々なスタイルのダンスを楽しめます。</p>
+                        </div>
+                        <div class="list-three-img__item">
+                            <p class="list-three-img__img">
+                                <img src="/images/fitness/img_35.webp" alt="program-img04" width="354" height="230">
+                            </p>
+                            <h4 class="list-three-img__ttl">ヨガ・ピラティス</h4>
+                            <p>メンタルコントロールやボディメイク、体幹部の筋バランスを整えます。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-cont pb00">
+                    <h3 class="two-column__ttl text-left mb40">アクアプログラム</h3>
+                    <p class="mb30">
+                        <img src="/images/fitness/img_36.webp" alt="アクアプログラム" width="1104" height="321">
+                    </p>
+                    <p class="text-center">アクアプログラムはバランスよく身体を鍛えられる全身を使った有酸素運動です。<br>地上で行う運動に比べ、ひざや腰に負担が少ないため、痛みの気になる方も運動を続けられます。<br>水中ウォーキングやアクアビクスなら泳ぎが苦手な方でも気軽に楽しく身体を動かせます。</p>
+                    <div class="list-three-img pd-top pd-top--m">
+                        <div class="list-three-img__item">
+                            <p class="list-three-img__img">
+                                <img src="/images/fitness/img_37.webp" alt="program-img06" width="354" height="231">
+                            </p>
+                            <h4 class="list-three-img__ttl">スイミング</h4>
+                            <p>水慣れから4泳法習得までを目的としたプログラムです。</p>
+                        </div>
+                        <div class="list-three-img__item">
+                            <p class="list-three-img__img">
+                                <img src="/images/fitness/img_38.webp" alt="program-img07" width="354" height="231">
+                            </p>
+                            <h4 class="list-three-img__ttl">アクアビクス</h4>
+                            <p>初期運動から有酸素運動まで水中で楽しめるプログラムです。</p>
+                        </div>
+                        <div class="list-three-img__item">
+                            <p class="list-three-img__img">
+                                <img src="/images/fitness/img_39.webp" alt="program-img08" width="354" height="231">
+                            </p>
+                            <h4 class="list-three-img__ttl">ウォーキング</h4>
+                            <p>水の中で歩行運動を行います。目的に合わせた基本的な歩き方が中心で、初めての方でも安心のプログラムです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-cont-larger bg-gray stripe-top-left stripe-top-left--short sec-price" id="price">
+            <div class="container">
+                <h2 class="cm-ttl01">
+                    <span class="txt-eng txt-eng--gray">price</span>
+                    <span class="txt-jp">料金案内</span>
+                </h2>
+            </div>
+            <div class="sec-price__main">
+                <div class="container">
+                    <h3 class="sec-price__main-sub">衝撃的バリュープライス</h3>
+                    <div class="list-price">
+                        <div class="list-price__item">
+                            <h3 class="list-price__ttl--yellow">夫婦2名+中高生会員で 6,960円</h3>
+                            <h4 class="list-price__ttl">パパママペア会員(2名合計)
+                            </h4>
+                            <div class="list-price__body" style="height: 345.078px;">
+                                <p class="list-price__price">
+                                    <span class="number">4,980</span>
+                                    <span class="unit">円／月<label>（税別）</label></span>
+                                </p>
+                                <p class="list-price__price2">5,478円／月<span>（税込）</span></p>
+                                <ul class="list-tick">
+                                    <li>最新ジムマシン</li>
+                                    <li>プール利用</li>
+                                    <li>スパ・サウナ利用</li>
+                                    <li>全レッスン受講可能</li>
+                                    <li>全営業時間ご利用可能</li>
+                                </ul>
+                            </div>
+                            <div class="list-price__foot" style="height: 328.57px;">
+                                <table class="style-table01">
+                                    <tbody>
+                                        <tr>
+                                            <th>利用時間</th>
+                                            <td>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">月～金曜日：<span>※水曜日を除く</span></p>
+                                                        <p class="list-time__time">9:00 ～ 22:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">土曜日：</p>
+                                                        <p class="list-time__time">9:00 ～ 20:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">日曜・祝日：</p>
+                                                        <p class="list-time__time">9:00 ～ 19:00</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>休館日</th>
+                                            <td>
+                                                <p class="mb07">水曜日（定休日）</p>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">夏季休業：</p>
+                                                        <p class="list-time__time">8/12 ～ 8/16</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">年末年始：</p>
+                                                        <p class="list-time__time">12/28 ～ 1/3</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-center">
+                                    <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" target="_blank" class="cm-btn btn-shadow cm-arr cm-arr--right btn-hover">WEB入会はこちら</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="list-price__item">
+                            <h3 class="list-price__ttl--yellow">親子で通っても月 5,960円</h3>
+                            <h4 class="list-price__ttl">パパママ会員(1名)</h4>
+                            <div class="list-price__body" style="height: 345.078px;">
+                                <p class="list-price__price">
+                                    <span class="number">3,980</span>
+                                    <span class="unit">円／月<label>（税別）</label></span>
+                                </p>
+                                <p class="list-price__price2">4,378円／月<span>（税込）</span></p>
+                                <ul class="list-tick">
+                                    <li>最新ジムマシン</li>
+                                    <li>プール利用</li>
+                                    <li>スパ・サウナ利用</li>
+                                    <li>全レッスン受講可能</li>
+                                    <li>全営業時間ご利用可能</li>
+                                </ul>
+                            </div>
+                            <div class="list-price__foot" style="height: 328.57px;">
+                                <table class="style-table01">
+                                    <tbody>
+                                        <tr>
+                                            <th>利用時間</th>
+                                            <td>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">月～金曜日：<span>※水曜日を除く</span></p>
+                                                        <p class="list-time__time">9:00 ～ 22:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">土曜日：</p>
+                                                        <p class="list-time__time">9:00 ～ 20:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">日曜・祝日：</p>
+                                                        <p class="list-time__time">9:00 ～ 19:00</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>休館日</th>
+                                            <td>
+                                                <p class="mb07">水曜日（定休日）</p>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">夏季休業：</p>
+                                                        <p class="list-time__time">8/12 ～ 8/16</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">年末年始：</p>
+                                                        <p class="list-time__time">12/28 ～ 1/3</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-center">
+                                    <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" target="_blank" class="cm-btn btn-shadow cm-arr cm-arr--right btn-hover">WEB入会はこちら</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="list-price__item">
+                            <h4 class="list-price__ttl"><strong class="co-yellow3 txt-lg">新料金</strong>中高生会員<br><span>対象：中学生・高校生</span>
+                            </h4>
+                            <div class="list-price__body" style="height: 345.078px;">
+                                <p class="list-price__price">
+                                    <span class="number co-yellow3">1,980</span>
+                                    <span class="unit">円／月<label>（税別）</label></span>
+                                </p>
+                                <p class="list-price__price2">2,178円／月<span>（税込）</span></p>
+                                <ul class="list-tick">
+                                    <li>最新ジムマシン</li>
+                                    <li>プール利用</li>
+                                    <li>スパ・サウナ利用</li>
+                                    <li>下記営業時間のご利用可能</li>
+                                </ul>
+                            </div>
+                            <div class="list-price__foot" style="height: 328.57px;">
+                                <table class="style-table01">
+                                    <tbody>
+                                        <tr>
+                                            <th>利用時間</th>
+                                            <td>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">月～金曜日：<span>※水曜日を除く</span></p>
+                                                        <p class="list-time__time">15:00 ～ 21:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">土曜日：</p>
+                                                        <p class="list-time__time">15:00 ～ 20:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">日曜・祝日：</p>
+                                                        <p class="list-time__time">15:00 ～ 19:00</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>休館日</th>
+                                            <td>
+                                                <p class="mb07">水曜日（定休日）</p>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">夏季休業：</p>
+                                                        <p class="list-time__time">8/12 ～ 8/16</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">年末年始：</p>
+                                                        <p class="list-time__time">12/28 ～ 1/3</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-center">
+                                    <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" target="_blank" class="cm-btn btn-shadow cm-arr cm-arr--right btn-hover">WEB入会はこちら</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="list-price__item">
+                            <h4 class="list-price__ttl">U40会員<br><span>対象：40歳未満</span>
+                            </h4>
+                            <div class="list-price__body" style="height: 345.078px;">
+                                <p class="list-price__price">
+                                    <span class="number">3,980</span>
+                                    <span class="unit">円／月<label>（税別）</label></span>
+                                </p>
+                                <p class="list-price__price2">4,378円／月<span>（税込）</span></p>
+                                <ul class="list-tick">
+                                    <li>最新ジムマシン</li>
+                                    <li>プール利用</li>
+                                    <li>スパ・サウナ利用</li>
+                                    <li>全レッスン受講可能</li>
+                                    <li>全営業時間ご利用可能</li>
+                                </ul>
+                            </div>
+                            <div class="list-price__foot" style="height: 328.57px;">
+                                <table class="style-table01">
+                                    <tbody>
+                                        <tr>
+                                            <th>利用時間</th>
+                                            <td>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">月～金曜日：<span>※水曜日を除く</span></p>
+                                                        <p class="list-time__time">9:00 ～ 22:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">土曜日：</p>
+                                                        <p class="list-time__time">9:00 ～ 20:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">日曜・祝日：</p>
+                                                        <p class="list-time__time">9:00 ～ 19:00</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>休館日</th>
+                                            <td>
+                                                <p class="mb07">水曜日（定休日）</p>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">夏季休業：</p>
+                                                        <p class="list-time__time">8/12 ～ 8/16</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">年末年始：</p>
+                                                        <p class="list-time__time">12/28 ～ 1/3</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-center">
+                                    <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" target="_blank" class="cm-btn btn-shadow cm-arr cm-arr--right btn-hover">WEB入会はこちら</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="list-price__item">
+                            <h4 class="list-price__ttl">レギュラー会員<br><span>対象：40歳以上</span>
+                            </h4>
+                            <div class="list-price__body" style="height: 345.078px;">
+                                <p class="list-price__price">
+                                    <span class="number">6,980</span>
+                                    <span class="unit">円／月<label>（税別）</label></span>
+                                </p>
+                                <p class="list-price__price2">7,678円／月<span>（税込）</span></p>
+                                <ul class="list-tick">
+                                    <li>最新ジムマシン</li>
+                                    <li>プール利用</li>
+                                    <li>スパ・サウナ利用</li>
+                                    <li>全レッスン受講可能</li>
+                                    <li>全営業時間ご利用可能</li>
+                                </ul>
+                            </div>
+                            <div class="list-price__foot" style="height: 328.57px;">
+                                <table class="style-table01">
+                                    <tbody>
+                                        <tr>
+                                            <th>利用時間</th>
+                                            <td>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">月～金曜日：<span>※水曜日を除く</span></p>
+                                                        <p class="list-time__time">9:00 ～ 22:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">土曜日：</p>
+                                                        <p class="list-time__time">9:00 ～ 20:00</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day w-set">日曜・祝日：</p>
+                                                        <p class="list-time__time">9:00 ～ 19:00</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>休館日</th>
+                                            <td>
+                                                <p class="mb07">水曜日（定休日）</p>
+                                                <div class="list-time">
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">夏季休業：</p>
+                                                        <p class="list-time__time">8/12 ～ 8/16</p>
+                                                    </div>
+                                                    <div class="list-time__item">
+                                                        <p class="list-time__day">年末年始：</p>
+                                                        <p class="list-time__time">12/28 ～ 1/3</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-center">
+                                    <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" target="_blank" class="cm-btn btn-shadow cm-arr cm-arr--right btn-hover">WEB入会はこちら</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-cont pb00">
+                <div class="container">
+                    <h3 class="text-center txt-l">会員種別ごとの利用時間詳細</h3>
+                    <div class="show-pc">
+                        <table class="style-table03">
+                            <thead>
+                                <tr>
+                                    <th class="col-w--s">会員種別</th>
+                                    <th class="col-w--m">対象</th>
+                                    <th class="col-w--sm">利用時間</th>
+                                    <th colspan="2">曜日別・エリア別利用時間</th>
+                                    <th>月会費</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>レギュラー</th>
+                                    <td class="bg-blue">40歳以上</td>
+                                    <td rowspan="3" class="f16">全営業時間</td>
+                                    <td class="bg-gray border-right-0 col-w--s">平日<br>(休館日：水曜日)</td>
+                                    <td class="p00 border-left-0">
+                                        <div class="table-time">
+                                            <dl>
+                                                <dt>ジム・スタジオ</dt>
+                                                <dd>9:00～21:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>プール</dt>
+                                                <dd>9:00～21:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>浴室</dt>
+                                                <dd>9:00～21:45</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>ロッカールーム</dt>
+                                                <dd>9:00～22:00</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="price">
+                                            <p class="price__ex-tax">
+                                                <span class="number">6,980</span>
+                                                <span class="unit">円<label>（税別）</label></span>
+                                            </p>
+                                            <p class="price__in-tax">7,678円<small>（税込）</small></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>U40</th>
+                                    <td class="bg-blue">40歳未満</td>
+                                    <td class="bg-gray border-right-0">土曜日</td>
+                                    <td class="p00 border-left-0">
+                                        <div class="table-time">
+                                            <dl>
+                                                <dt>ジム・スタジオ</dt>
+                                                <dd>9:00～19:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>プール</dt>
+                                                <dd>9:00～19:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>浴室</dt>
+                                                <dd>9:00～19:45</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>ロッカールーム</dt>
+                                                <dd>9:00～20:00</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="price">
+                                            <p class="price__ex-tax">
+                                                <span class="number">3,980</span>
+                                                <span class="unit">円<label>（税別）</label></span>
+                                            </p>
+                                            <p class="price__in-tax">4,378円<small>（税込）</small></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="kids_pa_th">対象拡大<span>Special Price</span>パパママ</th>
+                                    <td class="kids_pa_td"><span class="f16 bold">お子さまがキッズスクールまたはフィットネス中高生会員に通われている方</span><br><span class="f12">保護者様がお二人とも利用を希望される場合は、1名様につき3,980円/月（4,378円税込）でご入会頂けます</span></td>
+                                    <td class="bg-gray  border-right-0">日曜日・祝日</td>
+                                    <td class="p00 border-left-0">
+                                        <div class="table-time">
+                                            <dl>
+                                                <dt>ジム・スタジオ</dt>
+                                                <dd>9:00～18:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>プール</dt>
+                                                <dd>9:00～18:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>浴室</dt>
+                                                <dd>9:00～18:45</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>ロッカールーム</dt>
+                                                <dd>9:00～19:00</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="price kids_pa_price">
+                                            <p class="price__ex-tax kids_pa_price_color">
+                                                <span class="number">3,980</span>
+                                                <span class="unit">円<label>（税別）</label></span>
+                                            </p>
+                                            <p class="price__in-tax">4,378円<small>（税込）</small></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="3">中高生</th>
+                                    <td rowspan="3" class="bg-blue">中学生・高校生</td>
+                                    <td rowspan="3" class="f16">■月〜金曜日<br>15:00～21:00<br>※水曜日を除く<br>■土曜<br>15:00～20:00<br>■日曜・祝日<br>15:00～19:00</td>
+                                    <td class="bg-gray border-right-0 col-w--s">平日<br>(休館日：水曜日)</td>
+                                    <td class="p00 border-left-0">
+                                        <div class="table-time">
+                                            <dl>
+                                                <dt>ジム・スタジオ</dt>
+                                                <dd>15:00～20:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>プール</dt>
+                                                <dd>15:00～20:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>浴室</dt>
+                                                <dd>15:00～20:45</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>ロッカールーム</dt>
+                                                <dd>15:00～21:00</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                    <td rowspan="3" class="col-price">
+                                        <h4 class="list-price__ttl bg-none"><strong class="co-yellow3 txt-lg">新料金</strong></h4>
+                                        <div class="price">
+                                            <p class="price__ex-tax">
+                                                <span class="number">1,980</span>
+                                                <span class="unit">円<label>（税別）</label></span>
+                                            </p>
+                                            <p class="price__in-tax">2,178円<small>（税込）</small></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray border-right-0 col-w--s">土曜日</td>
+                                    <td class="p00 border-left-0">
+                                        <div class="table-time">
+                                            <dl>
+                                                <dt>ジム・スタジオ</dt>
+                                                <dd>15:00～19:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>プール</dt>
+                                                <dd>15:00～19:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>浴室</dt>
+                                                <dd>15:00～19:45</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>ロッカールーム</dt>
+                                                <dd>15:00～20:00</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray border-right-0 col-w--s">日曜日・祝日</td>
+                                    <td class="p00 border-left-0">
+                                        <div class="table-time">
+                                            <dl>
+                                                <dt>ジム・スタジオ</dt>
+                                                <dd>15:00～18:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>プール</dt>
+                                                <dd>15:00～18:30</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>浴室</dt>
+                                                <dd>15:00～18:45</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>ロッカールーム</dt>
+                                                <dd>15:00～19:00</dd>
+                                            </dl>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="show-sp">
+                        <div class="acc-list acc-list__price">
+                            <div class="acc-list__item">
+                                <div class="acc-list__head">
+                                    <h3 class="acc-list__ttl cm-arr cm-arr--arr-white cm-arr--down">レギュラー</h3>
+                                </div>
+                                <div class="acc-list__body">
+                                    <table class="style-table03">
+                                        <tbody><tr>
+                                            <td class="bg-blue">40歳以上</td>
+                                        </tr>
+                                        <tr>
+                                            <td>全営業時間</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">平日（休館日：水曜日）</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～21:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～21:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～21:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～22:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">土曜日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～19:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～19:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～19:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～20:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">日曜日・祝日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～18:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～18:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～18:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～19:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc-list acc-list__price">
+                            <div class="acc-list__item">
+                                <div class="acc-list__head">
+                                    <h3 class="acc-list__ttl cm-arr cm-arr--arr-white cm-arr--down">U40</h3>
+                                </div>
+                                <div class="acc-list__body">
+                                    <table class="style-table03">
+                                        <tbody><tr>
+                                            <td class="bg-blue">30歳未満</td>
+                                        </tr>
+                                        <tr>
+                                            <td>全営業時間</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">平日（休館日：水曜日）</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～21:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～21:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～21:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～22:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">土曜日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～19:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～19:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～19:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～20:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">日曜日・祝日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～18:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～18:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～18:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～19:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc-list acc-list__price">
+                            <div class="acc-list__item">
+                                <div class="acc-list__head kids_pa_th_fitsp">
+                                    <h3 class="acc-list__ttl cm-arr cm-arr--arr-white cm-arr--down">パパママ</h3>
+                                </div>
+                                <div class="acc-list__body">
+                                    <table class="style-table03">
+                                        <tbody><tr>
+                                            <td class="kids_pa_td"><b class="f16">お子さまがキッズスクールまたはフィットネス中高生会員に通われている方</b><br><span class="f12">保護者様がお二人とも利用を希望される場合は、1名様につき3,980円/月（4,378円税込）でご入会頂けます</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>全営業時間</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">平日（休館日：水曜日）</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～21:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～21:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～21:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～22:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">土曜日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～19:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～19:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～19:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～20:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">日曜日・祝日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>9:00～18:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>9:00～18:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>9:00～18:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>9:00～19:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc-list acc-list__price">
+                            <div class="acc-list__item">
+                                <div class="acc-list__head">
+                                    <h3 class="acc-list__ttl cm-arr cm-arr--arr-white cm-arr--down">中高生</h3>
+                                </div>
+                                <div class="acc-list__body">
+                                    <table class="style-table03">
+                                        <tbody><tr>
+                                            <td class="bg-blue">中学生・高校生</td>
+                                        </tr>
+                                        <tr>
+                                            <td>■月〜金曜日<br>9:00～22:00<br>※水曜日を除く<br>■土曜<br>9:00～20:00<br>■日曜・祝日<br>9:00～19:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">平日（休館日：水曜日）</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>15:00～20:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>15:00～20:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>15:00～20:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>15:00～21:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">土曜日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>15:00～19:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>15:00～19:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>15:00～19:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>15:00～20:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-gray">日曜日・祝日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p00">
+                                                <div class="table-time">
+                                                    <dl>
+                                                        <dt>ジム・スタジオ</dt>
+                                                        <dd>15:00～18:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>プール</dt>
+                                                        <dd>15:00～18:30</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>浴室</dt>
+                                                        <dd>15:00～18:45</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>ロッカールーム</dt>
+                                                        <dd>15:00～19:00</dd>
+                                                    </dl>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-cont pb00">
+                <div class="container">
+                    <h3 class="text-center txt-l">年会費・入会金</h3>
+                    <table class="style-table03 table-m">
+                        <thead>
+                            <tr>
+                                <th>内容</th>
+                                <th>料金</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>年会費</th>
+                                <td>
+                                    <div class="price set-w_ex-tax">
+                                        <p class="price__ex-tax">
+                                            <span class="number">3,000</span>
+                                            <span class="unit pl20">円<label>（税別）</label></span>
+                                        </p>
+                                        <p class="price__in-tax col-w--ss">3,300円<small>（税込）</small></p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>入会金</th>
+                                <td>
+                                    <div class="price set-w_ex-tax">
+                                        <p class="price__ex-tax">
+                                            <span class="number">5,000</span>
+                                            <span class="unit pl20">円<label>（税別）</label></span>
+                                        </p>
+                                        <p class="price__in-tax col-w--ss">5,500円<small>（税込）</small></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="sec-cont pb00">
+                <div class="container">
+                    <h3 class="text-center txt-l">オプション</h3>
+                    <table class="style-table03 table-m">
+                        <thead>
+                            <tr>
+                                <th>内容</th>
+                                <th>料金</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>プライベートロッカー</th>
+                                <td>
+                                    <div class="price set-w_ex-tax">
+                                        <p class="price__ex-tax">
+                                            <span class="number">5,500</span>
+                                            <span class="unit">円/6ヶ月<label>（税別）</label></span>
+                                        </p>
+                                        <p class="price__in-tax col-w--ss">6,050円<small>（税込）</small></p>
+                                    </div>
+                                    <div class="price set-w_ex-tax">
+                                        <p class="price__ex-tax">
+                                            <span class="number">10,000</span>
+                                            <span class="unit">円/12ヶ月<label>（税別）</label></span>
+                                        </p>
+                                        <p class="price__in-tax col-w--ss">11,000円<small>（税込）</small></p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>レンタルシューズ</th>
+                                <td>
+                                    <div class="price set-w_ex-tax">
+                                        <p class="price__ex-tax">
+                                            <span class="number">300</span>
+                                            <span class="unit">円/回<label>（税別）</label></span>
+                                        </p>
+                                        <p class="price__in-tax col-w--ss">330円<small>（税込）</small></p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>レンタルタオル</th>
+                                <td>
+                                    <div class="price set-w_ex-tax">
+                                        <p class="price__ex-tax">
+                                            <span class="number">300</span>
+                                            <span class="unit">円/回<label>（税別）</label></span>
+                                        </p>
+                                        <p class="price__in-tax col-w--ss">330円<small>（税込）</small></p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>ビジター利用</th>
+                                <td>
+                                    <div class="price set-w_ex-tax">
+                                        <p class="price__ex-tax">
+                                            <span class="number">3,000</span>
+                                            <span class="unit">円/回<label>（税別）</label></span>
+                                        </p>
+                                        <p class="price__in-tax col-w--ss">3,300円<small>（税込）</small></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="sec-cont-larger pb00" id="flow">
+            <div class="container">
+                <h2 class="cm-ttl01">
+                    <span class="txt-eng txt-eng--gray">flow</span>
+                    <span class="txt-jp">入会の流れ</span>
+                </h2>
+                <h3 class="txt-m text-center">いつでも、お気軽に、WEBから簡単にお手続きいただけます。</h3>
+                <div class="list-step">
+                    <div class="box-step">
+                        <div class="box-step__number">
+                            <p>step</p>
+                        </div>
+                        <h3 class="box-step__ttl">WEBから手続き</h3>
+                        <div class="box-step__infor clearfix">
+                            <div class="box-step__img">
+                                <img src="/images/fitness/img_40.webp" alt="flow-img01" width="447" height="290">
+                            </div>
+                            <div class="box-step__txt overflow-hidden">
+                                <p>クレジットカードをお手元にご準備ください。</p>
+                                <p>
+                                    <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" target="_blank" class="cm-btn btn-shadow-blur cm-arr cm-arr--right btn-hover">こちらのフォームからご入会のお手続きを進めてください。</a>
+                                </p>
+                                <ul class="list-indent3">
+                                    <li>※ 個人情報は暗号化されますので安心してご利用いただけます。</li>
+                                    <li>※ クレジットカードをお持ちでない方はご入会いただけません。ただしご親族さま等のご同意が得られた場合に限り、ご親族さまご所有のクレジットカードで決済及び月会費の引き落としを行うことは可能です。</li>
+                                </ul>
+                                <p>WEB入会がスムーズにいかない場合は、店舗の備え付けのタブレットを使用し、スタッフが説明しながらご一緒に対応させていただきます。</p>
+                                <div class="link-pdf">
+                                    <a href="/wp-content/themes/pal-ball//images/fitness/guide/WEB入会マニュアル.pdf" target="_blank" class="link-pdf__link nav-link text-underline">WEB操作マニュアルはこちら</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-step">
+                        <div class="box-step__number">
+                            <p>step</p>
+                        </div>
+                        <h3 class="box-step__ttl">クレジットカードで決済</h3>
+                        <div class="box-step__infor clearfix">
+                            <div class="box-step__img">
+                                <img src="/images/fitness/img_41.webp" alt="flow-img02" width="447" height="290">
+                            </div>
+                            <div class="box-step__txt">
+                                <p>会員情報を登録すると、初期費用決済の手続き画面へ移行します。<br>お手持ちのクレジットカード情報をご入力いただくことで、初期費用の決済と会費の引き落としをするクレジットカードの登録が完了します。</p>
+                                <ul class="list-indent3">
+                                    <li>※ デビットカード、プリペイドカードはご利用いただけません。</li>
+                                    <li>※ [pal-ball@hsc-g.co.jp]からのメールを受信できるよう、設定をお願いいたします。</li>
+                                    <li>※ URLリンク付きメールを受信できるよう、設定をお願いいたします。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-step">
+                        <div class="box-step__number">
+                            <p>step</p>
+                        </div>
+                        <h3 class="box-step__ttl">ご来店の上、顔認証登録と誓約書への署名・ガイドブックの受け取り</h3>
+                        <div class="box-step__infor clearfix">
+                            <div class="box-step__img">
+                                <img src="/images/fitness/img_42.webp" alt="flow-img03" width="447" height="290">
+                            </div>
+                            <div class="box-step__txt">
+                                <p>ご来店時には必ず公的身分証明書（現住所と一致するもの）をお持ちください。当日は入館に必要な顔写真の撮影を行い、誓約書へのご署名をいただきます。手続き対応時間内にご来店ください。</p>
+                                <ul class="list-indent3">
+                                    <li>※ 最終の来店可能時間は手続き対応時間終了の30分前までとなります。</li>
+                                </ul>
+                                <div class="bg-gray">
+                                    <h4>手続き対応時間</h4>
+                                    <ul class="list-time">
+                                        <li class="list-time__item">
+                                            <span class="list-time__day w-set text-left">月～金曜日</span>
+                                            <span>：10:00～21:00　※水曜日除く</span>
+                                        </li>
+                                        <li class="list-time__item">
+                                            <span class="list-time__day w-set text-left">土曜日</span>
+                                            <span>：10:00～19:00</span>
+                                        </li>
+                                        <li class="list-time__item">
+                                            <span class="list-time__day w-set text-left">日曜・祝日</span>
+                                            <span>：10:00～18:00</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-step">
+                        <div class="box-step__number">
+                            <p>step</p>
+                        </div>
+                        <h3 class="box-step__ttl">入会完了・利用開始</h3>
+                        <div class="box-step__infor clearfix">
+                            <div class="box-step__img">
+                                <img src="/images/fitness/img_43.webp" alt="flow-img04" width="447" height="290">
+                            </div>
+                            <div class="box-step__txt">
+                                <p>ご入会のお手続きが全て完了いたしましたら、利用開始日よりご利用いただけます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="sec-cont sec-WEB">
+    <div class="container">
+        <h2 class="sec-WEB__ttl">WEB入会・スクール体験申し込みは<br class="show-sp">こちらから</h2>
+        <div class="list-banner">
+            <div class="list-banner__banner banner-black">
+                <h3 class="list-banner__ttl">フィットネス</h3>
+                <p>WEBより入会手続きを行ってください。</p>
+                <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" target="_blank" class="cm-btn cm-btn--btn-white btn-shadow-blur cm-arr cm-arr--right btn-hover btn-hover--yellow">フィットネスWEB入会</a>
+            </div>
+            <div class="list-banner__banner banner-blue">
+                <h3 class="list-banner__ttl">キッズスクール</h3>
+                <p>入会前の体験レッスンはこちらからお申し込みください。</p>
+                <a href="https://scr.buscatch.net/trial/list?f=pal-ball" target="_blank" class="cm-btn cm-btn--btn-white btn-shadow-blur cm-arr cm-arr--right btn-hover btn-hover--yellow">キッズスクール体験申し込み</a>
+            </div>
+        </div>
+        <ul class="list-btn">
+            <li class="list-btn__item">
+                <a href="/guide/#flow" class="cm-btn cm-btn--btn-white btn-shadow-blur cm-arr cm-arr--right btn-hover btn-hover--yellow">入会の流れ</a>
+            </li>
+            <li class="list-btn__item">
+                <a href="/contact/#faq" class="cm-btn cm-btn--btn-white btn-shadow-blur cm-arr cm-arr--right btn-hover btn-hover--yellow">よくある質問</a>
+            </li>
+        </ul>
+    </div>
+</section>
+</main>
+                        <!-- Floating_Banner -->
+                        <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&amp;SMBC=1" class="floating-banner" target="_blank" rel="noopener noreferrer">
+  <img src="/images/fitness/img_44.png" alt="24時間 WEB受付中">
+</a>
+</Layout>

@@ -1,0 +1,76 @@
+---
+// 全ページ共通 WEB入会・体験申込CTA
+---
+<section class="cta-section section">
+  <div class="container">
+    <div class="cta-inner">
+      <a
+        href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&SMBC=1"
+        class="cta-banner cta-fitness"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="cta-tag">FITNESS</span>
+        <p class="cta-main">フィットネス WEB入会</p>
+        <p class="cta-note">24時間オンラインで手続き完了</p>
+      </a>
+      <a
+        href="https://scr.buscatch.net/trial/list?f=pal-ball"
+        class="cta-banner cta-kids"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="cta-tag">KIDS SCHOOL</span>
+        <p class="cta-main">キッズスクール 体験申込</p>
+        <p class="cta-note">スイミング・ダンス 体験レッスン受付中</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.cta-section { background: var(--color-gray-light); }
+.cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.cta-banner {
+  display: block;
+  padding: 32px 28px;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  text-decoration: none;
+}
+.cta-banner:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+.cta-fitness {
+  background: var(--color-navy);
+  color: white;
+}
+.cta-kids {
+  background: var(--color-accent);
+  color: white;
+}
+.cta-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.cta-main {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+.cta-note { font-size: 0.82rem; opacity: 0.8; }
+
+@media (max-width: 768px) {
+  .cta-inner { grid-template-columns: 1fr; }
+}
+</style>

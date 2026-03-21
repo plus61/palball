@@ -1,0 +1,52 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  sub?: string;
+  bgImage?: string;
+}
+const { label, title, sub, bgImage } = Astro.props;
+---
+<section class="page-hero">
+  {bgImage && <div class="page-hero-bg" style={`background-image: url('${bgImage}')`}></div>}
+  <div class="container page-hero-inner">
+    <p class="section-label">{label}</p>
+    <h1 class="page-hero-title">{title}</h1>
+    {sub && <p class="page-hero-sub">{sub}</p>}
+  </div>
+</section>
+
+<style>
+.page-hero {
+  position: relative;
+  background: var(--color-navy);
+  padding: 80px 0 64px;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+}
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+.page-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  margin: 8px 0 12px;
+  line-height: 1.15;
+}
+.page-hero-sub {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+</style>
