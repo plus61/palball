@@ -31,9 +31,22 @@ a[href*="tel:"] { pointer-events: none; cursor: default; text-decoration: none; 
 h1, h2, h3, h4, h5, h6 { line-height: 1.6; }
 pre, code, kbd, samp, var, .font_mono { font-size: 1.3rem; line-height: 1.6; }
 pre { box-sizing: border-box; width: 100%; padding: 10px; border: 1px solid rgb(221, 221, 221); background-color: rgb(244, 244, 244); overflow-x: auto; }
-img { vertical-align: top; margin: 0px; padding: 0px; border: 0px; transition: 0.3s; }
+img { vertical-align: top; margin: 0px; padding: 0px; border: 0px; transition: 0.3s; height: auto; max-width: 100%; }
 button { transition: 0.3s; font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック体, "Yu Gothic", "ヒラギノ角ゴシック ProN", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
 input[type="submit"], input[type="button"] { transition: 0.3s; font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック体, "Yu Gothic", "ヒラギノ角ゴシック ProN", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+form { display: inline; }
+label { vertical-align: middle; }
+input, select, optgroup, option, textarea { box-sizing: border-box; margin: 0px; font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック体, "Yu Gothic", "ヒラギノ角ゴシック ProN", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; white-space: pre-wrap; }
+select { width: 100%; background: rgb(255, 255, 255); border: 1px solid rgb(213, 211, 208); height: 4rem; padding: 0.3rem 2rem; }
+input { padding: 0.3rem 2rem; background: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0); }
+input[type="text"] { width: 100%; background: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0); height: 4rem; padding: 0.3rem 2rem; }
+input[type="email"] { width: 100%; background: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0); height: 4rem; padding: 0.3rem 2rem; }
+input[type="radio"] { margin-right: 0.3em; padding: 0px; }
+input[type="checkbox"] { margin-right: 0.3em; padding: 0px; }
+input[type="submit"] { appearance: none; margin: 0px; padding: 0px; border: none; background-color: transparent; }
+input[type="submit"][disabled] { cursor: default; background-color: rgb(221, 221, 221) !important; transition: none !important; }
+input::placeholder, textarea::placeholder { color: rgb(77, 77, 77); }
+textarea { width: 100%; padding: 0.3rem 2rem; resize: vertical; overflow: auto; border: 1px solid rgb(0, 0, 0); background: rgb(255, 255, 255); }
 picture { display: block; line-height: 1.6; }
 figure { margin: 0px; padding: 0px; }
 .container { box-sizing: border-box; width: 100%; margin: 0px auto; }
@@ -898,6 +911,8 @@ figure { margin: 0px; padding: 0px; }
 .p-kids_swimming #point .point-head { background: url("https://pal-ball.com/wp-content/themes/pal-ball/assets/images/kids_swimming/point-bg.webp") center top / cover no-repeat; }
 .p-kids_swimming #consider_joining .txt-eng { white-space: nowrap; }
 .sec-head .inner-txt { background: rgb(255, 247, 217); margin: 0px; padding: 2rem; }
+@keyframes infiniteslide177406588374310c7 { from { transform: translate3d(0,0,0); } to { transform: translate3d(-4290px,0,0); } }
+@keyframes infiniteslide177406591561125e5 { from { transform: translate3d(0,0,0); } to { transform: translate3d(-4290px,0,0); } }
 .infiniteslide { width: 240vw; }
 .infiniteslide .slide-box { display: block; width: 40vw; margin: 0px; }
 .infiniteslide .slide-box img { width: 100%; }
