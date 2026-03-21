@@ -1,0 +1,214 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'パルバル湘南スポーツクラブ',
+  description = '茅ヶ崎のフィットネス、キッズ水泳・ダンス。バリューフィットネスでクオリティライフを。',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title === 'パルバル湘南スポーツクラブ' ? title : `${title} | パルバル湘南スポーツクラブ`}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="/" class="header-logo">
+        <img src="/images/logo.webp" alt="パルバル湘南スポーツクラブ" width="200" />
+      </a>
+
+      <nav class="header-nav">
+        <ul>
+          <li><a href="/concept">コンセプト</a></li>
+          <li><a href="/guide">料金 / 入会案内</a></li>
+          <li><a href="/fitness">フィットネス</a></li>
+          <li><a href="/personal">パーソナルトレーニング</a></li>
+          <li><a href="/kids_swimming">キッズスイミング</a></li>
+          <li><a href="/kids_dance">キッズダンス</a></li>
+          <li><a href="/facility">施設紹介</a></li>
+          <li><a href="/contact#faq">よくある質問</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&SMBC=1"
+           class="btn btn-primary" target="_blank" rel="noopener">
+          フィットネス WEB入会
+        </a>
+        <a href="https://scr.buscatch.net/trial/list?f=pal-ball"
+           class="btn btn-outline" target="_blank" rel="noopener">
+          キッズスクール 体験申込
+        </a>
+      </div>
+
+      <!-- ハンバーガー（SP） -->
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="/"><img src="/images/logo.webp" alt="パルバル湘南スポーツクラブ" width="180" /></a>
+          <p>〒253-0042<br>神奈川県茅ヶ崎市本村1丁目4-20</p>
+          <p><a href="tel:0467-54-4411">0467-54-4411</a></p>
+          <p class="footer-hours">
+            月〜金: 9:00〜22:00（水曜定休）<br>
+            土: 9:00〜20:00 / 日祝: 9:00〜19:00
+          </p>
+        </div>
+
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/concept">コンセプト</a></li>
+            <li><a href="/guide">料金 / 入会案内</a></li>
+            <li><a href="/fitness">フィットネス</a></li>
+            <li><a href="/personal">パーソナルトレーニング</a></li>
+            <li><a href="/kids_swimming">キッズスイミング</a></li>
+            <li><a href="/kids_dance">キッズダンス</a></li>
+            <li><a href="/facility">施設紹介</a></li>
+            <li><a href="/topics">お知らせ</a></li>
+            <li><a href="/company">会社案内</a></li>
+            <li><a href="/recruitment">採用情報</a></li>
+            <li><a href="/contact">お問い合わせ</a></li>
+            <li><a href="/contact#pp">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-sns">
+        <a href="https://www.facebook.com/profile.php?id=61572886543186" target="_blank" rel="noopener">Facebook Fitness</a>
+        <a href="https://www.instagram.com/palball_fitness/" target="_blank" rel="noopener">Instagram Fitness</a>
+        <a href="https://www.instagram.com/palball_shonan_sportsclub/" target="_blank" rel="noopener">Instagram Kids School</a>
+      </div>
+
+      <p class="footer-copy">&copy; 2025 pal-ball shonan sportsclub.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+<style>
+/* ヘッダー */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-navy);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.header-logo img { width: 160px; }
+.header-nav { flex: 1; }
+.header-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  list-style: none;
+}
+.header-nav a {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+.header-nav a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+.header-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.header-cta .btn {
+  font-size: 0.72rem;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: var(--transition);
+}
+
+/* フッター */
+.site-footer {
+  background: var(--color-navy);
+  color: rgba(255,255,255,0.8);
+  padding: 48px 0 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+.footer-info { display: flex; flex-direction: column; gap: 12px; }
+.footer-info img { margin-bottom: 4px; filter: brightness(0) invert(1); opacity: 0.9; }
+.footer-info p { font-size: 0.85rem; line-height: 1.6; }
+.footer-info a { color: var(--color-accent); }
+.footer-hours { font-size: 0.8rem; opacity: 0.7; }
+.footer-nav ul { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; }
+.footer-nav a { font-size: 0.82rem; opacity: 0.75; transition: var(--transition); }
+.footer-nav a:hover { opacity: 1; color: var(--color-accent); }
+.footer-sns {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-sns a { font-size: 0.82rem; opacity: 0.75; transition: var(--transition); }
+.footer-sns a:hover { opacity: 1; color: var(--color-accent); }
+.footer-copy { font-size: 0.75rem; opacity: 0.4; }
+
+@media (max-width: 768px) {
+  .header-nav, .header-cta { display: none; }
+  .hamburger { display: flex; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+</style>

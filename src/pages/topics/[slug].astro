@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const news = await getCollection('news');
+  return news.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await item.render();
+---
+
+<Layout title={item.data.title}>
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">news</p>
+      <h1 class="article-title">{item.data.title}</h1>
+      <time class="article-date">{item.data.date.replace(/-/g, '.')}</time>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container article-body">
+      <Content />
+      <div class="back-link">
+        <a href="/topics" class="btn btn-outline">← お知らせ一覧へ</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.page-header {
+  background: var(--color-navy);
+  padding: 48px 0;
+  color: white;
+}
+.article-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.article-date {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  color: var(--color-accent);
+}
+.article-body {
+  max-width: 800px;
+  line-height: 2;
+}
+.article-body :global(h2) {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 2rem 0 1rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-accent);
+}
+.article-body :global(h3) {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.75rem;
+}
+.article-body :global(p) { margin-bottom: 1rem; }
+.article-body :global(ul), .article-body :global(ol) {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.article-body :global(li) { margin-bottom: 0.25rem; }
+.back-link { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e0e0; }
+</style>

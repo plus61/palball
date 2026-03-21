@@ -1,0 +1,474 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// お知らせ（最新5件）
+const allNews = await getCollection('news');
+const latestNews = allNews
+  .sort((a, b) => b.data.date.localeCompare(a.data.date))
+  .slice(0, 5);
+---
+
+<Layout title="パルバル湘南スポーツクラブ | 茅ヶ崎のフィットネス、キッズ水泳・ダンス">
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="hero-content container">
+      <p class="hero-sub">MAKE QUALITY LIFE!</p>
+      <h1 class="hero-title">
+        ジムエリア＆料金体系を<br>完全リニューアルして<br><span>New Open!!</span>
+      </h1>
+      <p class="hero-desc">
+        1〜2セットで最大の成果を実現するノーチラスマシンを<br>
+        茅ヶ崎で唯一、17台新規導入
+      </p>
+      <div class="hero-btns">
+        <a href="/fitness" class="btn btn-primary">フィットネスを見る</a>
+        <a href="/guide" class="btn btn-outline-white">料金・入会案内</a>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- キャンペーンバナー -->
+  <section class="campaigns container">
+    <div class="campaign-grid">
+      <a href="/fitness#campaign" class="campaign-card">
+        <div class="campaign-inner">
+          <span class="campaign-label">NEW</span>
+          <p class="campaign-title">パパママペア会員</p>
+          <p class="campaign-price">4,980<small>円/月（税別）〜</small></p>
+          <p class="campaign-note">夫婦2名でお得に通える</p>
+        </div>
+      </a>
+      <a href="/fitness#campaign" class="campaign-card">
+        <div class="campaign-inner">
+          <span class="campaign-label">CAMPAIGN</span>
+          <p class="campaign-title">3月キャンペーン</p>
+          <p class="campaign-note">フィットネス入会特典あり</p>
+        </div>
+      </a>
+      <a href="/kids_swimming#campaign" class="campaign-card">
+        <div class="campaign-inner">
+          <span class="campaign-label">受付中</span>
+          <p class="campaign-title">スイミング体験会</p>
+          <p class="campaign-note">春の1DAY体験会</p>
+        </div>
+      </a>
+      <a href="/kids_dance#campaign" class="campaign-card">
+        <div class="campaign-inner">
+          <span class="campaign-label">受付中</span>
+          <p class="campaign-title">ダンス体験会</p>
+          <p class="campaign-note">エイベックス講師が直接指導</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- お知らせ -->
+  <section class="news section">
+    <div class="container">
+      <p class="section-label">news</p>
+      <div class="news-header">
+        <h2 class="section-title">お知らせ</h2>
+        <a href="/topics" class="btn btn-outline">一覧へ</a>
+      </div>
+      <ul class="news-list">
+        {latestNews.map((item) => (
+          <li class="news-item">
+            <a href={`/topics/${item.slug}`}>
+              <time class="news-date">{item.data.date.replace(/-/g, '.')}</time>
+              <span class="news-title-text">{item.data.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- サービス3本 -->
+  <section class="services section" style="background: var(--color-gray-light)">
+    <div class="container">
+      <div class="service-cards">
+
+        <div class="service-card">
+          <div class="service-img">
+            <img src="/images/top/fitness-img.webp" alt="フィットネス" loading="lazy" />
+          </div>
+          <div class="service-body">
+            <p class="section-label">fitness</p>
+            <h2 class="section-title">フィットネス</h2>
+            <p>ジムエリアは短時間で効果的なトレーニングを実現する、ノーチラスインパクトシリーズのマシンに全面入れ替え。会員の方はジム・スタジオ・プール・スパ・サウナの全エリアが利用可能です。</p>
+            <a href="/fitness" class="btn btn-primary" style="margin-top:1.5rem">フィットネス詳細</a>
+          </div>
+        </div>
+
+        <div class="service-card reverse">
+          <div class="service-img">
+            <img src="/images/top/kids_swimming-img.webp" alt="キッズスイミング" loading="lazy" />
+          </div>
+          <div class="service-body">
+            <p class="section-label">kids swimming</p>
+            <h2 class="section-title">キッズスイミング</h2>
+            <p>リオデジャネイロオリンピック競泳日本代表コーチが監修。発育発達に応じた段階的指導カリキュラムで心と身体を育みます。</p>
+            <a href="/kids_swimming" class="btn btn-primary" style="margin-top:1.5rem">スイミング詳細</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img">
+            <img src="/images/top/kids_dance-img.webp" alt="キッズダンス" loading="lazy" />
+          </div>
+          <div class="service-body">
+            <p class="section-label">kids dance</p>
+            <h2 class="section-title">キッズダンス</h2>
+            <p>現役エイベックス専属ダンス講師が直接指導。身体能力の向上はもちろん、コミュニケーション能力や自己表現の向上も期待できます。</p>
+            <a href="/kids_dance" class="btn btn-primary" style="margin-top:1.5rem">ダンス詳細</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- コンセプト -->
+  <section class="concept section">
+    <div class="container concept-inner">
+      <div>
+        <p class="section-label">concept</p>
+        <h2 class="section-title">パルバル湘南スポーツクラブ</h2>
+        <p class="concept-catch">バリューフィットネス<br>Make Quality Life</p>
+        <p class="concept-text">
+          茅ヶ崎で30年以上、地域と共に歩むパルバル湘南スポーツクラブ。
+          圧倒的なバリュープライスと時短フィットネスで、
+          皆さまのクオリティライフに貢献します。
+        </p>
+        <a href="/concept" class="btn btn-outline" style="margin-top:1.5rem">コンセプトを読む</a>
+      </div>
+      <div class="concept-logo">
+        <img src="/images/top/concept-logo.webp" alt="PAL-BALL SPORTS CLUB" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="pricing section" style="background: var(--color-navy)">
+    <div class="container">
+      <p class="section-label" style="color:var(--color-accent)">price</p>
+      <h2 class="section-title" style="color:white">料金案内</h2>
+
+      <div class="price-grid">
+        <div class="price-card featured">
+          <p class="price-badge">NEW / おすすめ</p>
+          <p class="price-cat">フィットネス</p>
+          <h3 class="price-name">パパママペア会員</h3>
+          <p class="price-note">夫婦2名合計</p>
+          <p class="price-num">4,980<span>円/月（税別）</span></p>
+          <ul class="price-features">
+            <li>最新ジムマシン</li>
+            <li>プール利用</li>
+            <li>スパ・サウナ利用</li>
+            <li>全レッスン受講可能</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <p class="price-cat">フィットネス</p>
+          <h3 class="price-name">U40会員</h3>
+          <p class="price-note">40歳未満</p>
+          <p class="price-num">3,980<span>円/月（税別）</span></p>
+          <ul class="price-features">
+            <li>最新ジムマシン</li>
+            <li>プール・スパ・サウナ</li>
+            <li>全レッスン受講可能</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <p class="price-cat">キッズスクール</p>
+          <h3 class="price-name">キッズスイミング</h3>
+          <p class="price-num">7,350<span>円〜/月（税別）</span></p>
+          <ul class="price-features">
+            <li>週1回〜</li>
+            <li>五輪代表コーチ監修</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <p class="price-cat">キッズスクール</p>
+          <h3 class="price-name">キッズダンス</h3>
+          <p class="price-num">6,850<span>円〜/月（税別）</span></p>
+          <ul class="price-features">
+            <li>週1回〜</li>
+            <li>エイベックス専属講師</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2.5rem">
+        <a href="/guide" class="btn btn-primary">全料金プランを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 施設 -->
+  <section class="facility-preview section">
+    <div class="container">
+      <p class="section-label">facility</p>
+      <h2 class="section-title">施設紹介</h2>
+      <div class="facility-imgs">
+        <img src="/images/top/facility-img01.webp" alt="施設" loading="lazy" />
+        <img src="/images/top/facility-img02.webp" alt="施設" loading="lazy" />
+        <img src="/images/top/facility-img03.webp" alt="施設" loading="lazy" />
+      </div>
+      <div style="text-align:center; margin-top:2rem">
+        <a href="/facility" class="btn btn-outline">施設一覧へ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 店舗情報 -->
+  <section class="store-info section" style="background:var(--color-gray-light)">
+    <div class="container">
+      <p class="section-label">access</p>
+      <h2 class="section-title">店舗情報</h2>
+      <div class="store-grid">
+        <div class="store-details">
+          <table class="store-table">
+            <tr><th>住所</th><td>〒253-0042 神奈川県茅ヶ崎市本村1丁目4-20</td></tr>
+            <tr><th>電話</th><td><a href="tel:0467-54-4411">0467-54-4411</a></td></tr>
+            <tr><th>営業時間</th><td>月〜金 9:00〜22:00（水曜定休）<br>土 9:00〜20:00 / 日祝 9:00〜19:00</td></tr>
+            <tr><th>駐車場</th><td>無料80台完備</td></tr>
+          </table>
+          <a href="/contact" class="btn btn-primary" style="margin-top:1.5rem">お問い合わせ</a>
+        </div>
+        <div class="store-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3253.3!2d139.4189!3d35.3377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDIwJzE1LjciTiAxMznCsDI1JzA4LjAiRQ!5e0!3m2!1sja!2sjp!4v1"
+            width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section">
+    <div class="container" style="text-align:center">
+      <h2 class="section-title">WEB入会・体験申し込み</h2>
+      <div class="cta-btns">
+        <div class="cta-block">
+          <p class="cta-label">フィットネス</p>
+          <a href="https://www4.e-atoms.jp/HAYASHIWebUser/PreReserv/index?TmpCd=003&SMBC=1"
+             class="btn btn-primary" target="_blank" rel="noopener">フィットネス WEB入会</a>
+        </div>
+        <div class="cta-block">
+          <p class="cta-label">キッズスクール</p>
+          <a href="https://scr.buscatch.net/trial/list?f=pal-ball"
+             class="btn btn-outline" target="_blank" rel="noopener">体験レッスン申し込み</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ヒーロー */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-navy);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/images/top/sp-main-img.webp') center/cover no-repeat;
+  opacity: 0.35;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.hero-sub {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero-title span { color: var(--color-accent); }
+.hero-desc { font-size: 1rem; opacity: 0.85; margin-bottom: 32px; line-height: 1.8; }
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-outline-white {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 2px solid rgba(255,255,255,0.7);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.btn-outline-white:hover { background: white; color: var(--color-navy); }
+
+/* キャンペーン */
+.campaigns { padding: 40px var(--container-pad); }
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.campaign-card {
+  background: var(--color-navy);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.campaign-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+.campaign-inner { padding: 20px 16px; color: white; }
+.campaign-label {
+  display: inline-block;
+  background: var(--color-accent);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 2px;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.campaign-title { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+.campaign-price { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--color-accent); }
+.campaign-price small { font-size: 0.75rem; font-weight: 400; color: white; }
+.campaign-note { font-size: 0.8rem; opacity: 0.75; }
+
+/* ニュース */
+.news-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.news-list { list-style: none; border-top: 1px solid #e0e0e0; }
+.news-item a {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: var(--transition);
+}
+.news-item a:hover { color: var(--color-navy); }
+.news-date { font-family: var(--font-heading); font-size: 0.8rem; color: var(--color-accent); flex-shrink: 0; }
+.news-title-text { font-size: 0.9rem; }
+
+/* サービス */
+.service-cards { display: flex; flex-direction: column; gap: 64px; }
+.service-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.service-card.reverse { direction: rtl; }
+.service-card.reverse > * { direction: ltr; }
+.service-img img { border-radius: var(--radius-lg); width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+/* コンセプト */
+.concept-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.concept-catch {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin: 12px 0;
+  line-height: 1.4;
+}
+.concept-text { line-height: 2; }
+.concept-logo img { width: 100%; max-width: 300px; margin: 0 auto; }
+
+/* 料金 */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 2rem;
+}
+.price-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  color: white;
+  transition: var(--transition);
+}
+.price-card:hover { background: rgba(255,255,255,0.12); }
+.price-card.featured {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.price-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: white;
+  color: var(--color-accent);
+  padding: 2px 8px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.price-cat { font-size: 0.75rem; opacity: 0.75; margin-bottom: 4px; }
+.price-name { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.price-note { font-size: 0.78rem; opacity: 0.7; margin-bottom: 12px; }
+.price-num {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.price-num span { font-size: 0.75rem; font-weight: 400; }
+.price-features { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.price-features li { font-size: 0.8rem; opacity: 0.85; }
+.price-features li::before { content: "✓ "; }
+
+/* 施設 */
+.facility-imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.facility-imgs img { border-radius: var(--radius-md); aspect-ratio: 4/3; object-fit: cover; width: 100%; }
+
+/* 店舗 */
+.store-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.store-table { width: 100%; border-collapse: collapse; }
+.store-table th, .store-table td { padding: 10px 0; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; vertical-align: top; }
+.store-table th { font-weight: 700; color: var(--color-navy); width: 80px; }
+.store-table a { color: var(--color-accent); }
+
+/* CTA */
+.cta-btns { display: flex; gap: 48px; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+.cta-block { text-align: center; }
+.cta-label { font-size: 0.85rem; font-weight: 700; color: var(--color-gray); margin-bottom: 12px; }
+
+@media (max-width: 768px) {
+  .campaign-grid, .price-grid { grid-template-columns: 1fr 1fr; }
+  .service-card, .service-card.reverse { grid-template-columns: 1fr; direction: ltr; }
+  .concept-inner { grid-template-columns: 1fr; }
+  .facility-imgs { grid-template-columns: 1fr; }
+  .store-grid { grid-template-columns: 1fr; }
+}
+</style>

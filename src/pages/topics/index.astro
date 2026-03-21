@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allNews = await getCollection('news');
+const sortedNews = allNews.sort((a, b) => b.data.date.localeCompare(a.data.date));
+---
+
+<Layout title="お知らせ">
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">news</p>
+      <h1 class="section-title">お知らせ</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <ul class="news-list">
+        {sortedNews.map((item) => (
+          <li class="news-item">
+            <a href={`/topics/${item.slug}`}>
+              <time class="news-date">{item.data.date.replace(/-/g, '.')}</time>
+              <span class="news-cat" data-cat={item.data.category}>
+                {item.data.category === 'fitness' ? 'フィットネス' :
+                 item.data.category === 'kids' ? 'キッズ' : 'お知らせ'}
+              </span>
+              <span class="news-title-text">{item.data.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.page-header {
+  background: var(--color-navy);
+  padding: 48px 0;
+  color: white;
+}
+.page-header .section-title { color: white; }
+.news-list { list-style: none; border-top: 1px solid #e0e0e0; }
+.news-item a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: 0.2s;
+}
+.news-item a:hover { color: var(--color-navy); padding-left: 8px; }
+.news-date { font-family: var(--font-heading); font-size: 0.82rem; color: var(--color-accent); flex-shrink: 0; }
+.news-cat {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  background: var(--color-navy);
+  color: white;
+}
+.news-cat[data-cat="fitness"] { background: #1a5c9a; }
+.news-cat[data-cat="kids"] { background: #2a9a5c; }
+.news-title-text { font-size: 0.92rem; }
+</style>
