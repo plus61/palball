@@ -8,7 +8,7 @@ interface Props {
 const { label, title, sub, bgImage } = Astro.props;
 ---
 <section class="page-hero">
-  {bgImage && <div class="page-hero-bg" style={`background-image: url('${bgImage}')`}></div>}
+  {bgImage && <div class="page-hero-bg" style={`background-image: url('/public/images/test-banner.png')`}></div>}
   <div class="container page-hero-inner">
     <p class="section-label">{label}</p>
     <h1 class="page-hero-title">{title}</h1>
