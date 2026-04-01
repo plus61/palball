@@ -22,3 +22,4 @@ dist/
 
 # WordPress source files (images copied to public/images/)
 contents/
+.vercel

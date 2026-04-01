@@ -259,12 +259,19 @@ const {
 // ハンバーガーメニュー
 const trigger = document.getElementById('triggerMenu');
 const menuContents = document.getElementById('menuContents');
-const body = document.body;
 
 if (trigger) {
   trigger.addEventListener('click', () => {
-    trigger.classList.toggle('is-active');
-    body.classList.toggle('is-menu-open');
+    trigger.classList.toggle('active');
+    menuContents?.classList.toggle('is-visible');
+  });
+
+  // ナビリンククリック時にメニューを閉じる
+  menuContents?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      trigger.classList.remove('active');
+      menuContents?.classList.remove('is-visible');
+    });
   });
 }
 
@@ -285,6 +292,45 @@ window.addEventListener('scroll', () => {
     pageUp.style.display = window.scrollY > 200 ? 'block' : 'none';
   }
 });
+
+// アコーディオン（.acc-list__head）
+document.querySelectorAll('.acc-list__head').forEach(head => {
+  head.addEventListener('click', () => {
+    head.classList.toggle('active');
+    const accBody = head.nextElementSibling;
+    if (accBody?.classList.contains('acc-list__body')) {
+      accBody.style.display = accBody.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+});
+
+// ビデオモーダル
+const videoModal = document.querySelector('.c-video-modal');
+const iframeContainer = videoModal?.querySelector('.c-video-modal__iframe');
+
+document.querySelectorAll('.js-open-video').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const videoUrl = btn.getAttribute('data-video');
+    if (iframeContainer && videoUrl) {
+      iframeContainer.innerHTML = `<iframe src="${videoUrl}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      videoModal?.classList.add('is-open');
+    }
+  });
+});
+
+document.querySelectorAll('.js-close-video, .c-video-modal__overlay').forEach(el => {
+  el.addEventListener('click', () => {
+    videoModal?.classList.remove('is-open');
+    if (iframeContainer) iframeContainer.innerHTML = '';
+  });
+});
+
+// ページ読み込み時のハッシュスクロール（固定ヘッダー対応）
+if (window.location.hash) {
+  requestAnimationFrame(() => {
+    document.querySelector(window.location.hash)?.scrollIntoView({ behavior: 'smooth' });
+  });
+}
 </script>
 </body>
 </html>
