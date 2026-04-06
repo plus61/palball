@@ -86,6 +86,13 @@ const {
             </li>
           </ul>
         </div>
+        <!-- モバイル用ハンバーガーメニュー（768px以下で表示） -->
+        <button class="hamburger-menu show-mobile" id="hamburgerMenu" aria-label="メニュー">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <!-- 既存のMENUボタン（1500px以上で表示） -->
         <a class="trigger-menu show-from-1500" id="triggerMenu">
           <p class="icon">
             <span></span>
@@ -256,9 +263,20 @@ const {
 </div><!-- /#wrapper -->
 
 <script>
-// ハンバーガーメニュー
-const trigger = document.getElementById('triggerMenu');
+// ハンバーガーメニュー（モバイル用）
+const hamburger = document.getElementById('hamburgerMenu');
 const menuContents = document.getElementById('menuContents');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-active');
+    menuContents.classList.toggle('is-visible');
+    body.classList.toggle('is-mobile-menu-open');
+  });
+}
+
+// 既存のMENUボタン（1500px以上）
+const trigger = document.getElementById('triggerMenu');
 
 if (trigger) {
   trigger.addEventListener('click', () => {

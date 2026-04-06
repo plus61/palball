@@ -119,6 +119,75 @@ figure { margin: 0px; padding: 0px; }
   .trigger-menu { width: 6rem; height: 6rem; }
   .trigger-menu .txt { display: none; }
 }
+
+/* ハンバーガーメニュースタイル */
+.hamburger-menu {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  background: var(--bg-yellow, #FFD700);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 9999;
+  transition: background 0.3s;
+  border-radius: 0.4rem;
+}
+
+.hamburger-line {
+  display: block;
+  position: absolute;
+  width: 2.4rem;
+  height: 0.3rem;
+  background: #333;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-line:nth-child(1) {
+  top: 1.4rem;
+}
+
+.hamburger-line:nth-child(2) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.hamburger-line:nth-child(3) {
+  bottom: 1.4rem;
+}
+
+/* ハンバーガーメニューが開いている状態 */
+.hamburger-menu.is-active .hamburger-line:nth-child(1) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.hamburger-menu.is-active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.is-active .hamburger-line:nth-child(3) {
+  bottom: 50%;
+  transform: translateX(-50%) translateY(50%) rotate(-45deg);
+}
+
+/* モバイル表示制御 */
+.show-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .show-mobile {
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
+
 .l-menu_contents .gnav { width: 100%; }
 .l-menu_contents .gnav__link { position: relative; display: inline-block; text-decoration: none; }
 @media only screen and (min-width: 1501px) {
